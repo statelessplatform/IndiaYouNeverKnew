@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The India We Never Knew</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation Controls -->
+    <button class="btn-home" id="btnHome" style="display: none;" aria-label="Return to hub" title="Return to Knowledge Hub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </svg>
+    </button>
+
+    <!-- Main Container -->
+    <div class="container" id="mainContainer">
+        
+        <!-- HOME SCREEN -->
+        <section class="screen active" id="screenHome" data-screen="home">
+            <div class="hero">
+                <div class="ornament top"></div>
+                <h1 class="hero-title">The India<br>We Never Knew</h1>
+                <p class="hero-tagline">A forgotten civilization's wisdom</p>
+                <p class="hero-subtitle">Where truth transcends lineage,<br>and character shapes destiny</p>
+                <button class="btn-enter" id="btnStart">Enter</button>
+                <div class="ornament bottom"></div>
+            </div>
+        </section>
+
+        <!-- KNOWLEDGE HUB -->
+        <section class="screen" id="screenHub" data-screen="hub">
+            <div class="hub-header">
+                <h2>Knowledge Hub</h2>
+                <p class="hub-desc">Choose your path through ancient wisdom</p>
+            </div>
+            
+            <div class="knowledge-grid">
+                <div class="knowledge-card" data-chapter="story">
+                    <div class="card-number">01</div>
+                    <h3>The Story of Satyakam</h3>
+                    <p>The transformative journey of truth and wisdom</p>
+                    <div class="card-footer">
+                        <span>12 moments</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card" data-chapter="india">
+                    <div class="card-number">02</div>
+                    <h3>India We Never Knew</h3>
+                    <p>Knowledge beyond birth, truth above tradition</p>
+                    <div class="card-footer">
+                        <span>8 insights</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card" data-chapter="women">
+                    <div class="card-number">03</div>
+                    <h3>Women as Knowledge Bearers</h3>
+                    <p>Jabali, Gargi, and Maitreyi's wisdom</p>
+                    <div class="card-footer">
+                        <span>6 voices</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card" data-chapter="education">
+                    <div class="card-number">04</div>
+                    <h3>Education as Character</h3>
+                    <p>Learning through discipline and service</p>
+                    <div class="card-footer">
+                        <span>7 principles</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card" data-chapter="truth">
+                    <div class="card-number">05</div>
+                    <h3>Truth & Social Order</h3>
+                    <p>Satya as foundation of civilization</p>
+                    <div class="card-footer">
+                        <span>5 teachings</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card" data-chapter="decline">
+                    <div class="card-number">06</div>
+                    <h3>Forgotten Wisdom</h3>
+                    <p>From living philosophy to recovery</p>
+                    <div class="card-footer">
+                        <span>6 reflections</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card" data-chapter="future">
+                    <div class="card-number">07</div>
+                    <h3>Reimagining the Future</h3>
+                    <p>Ancient wisdom for modern times</p>
+                    <div class="card-footer">
+                        <span>4 principles</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card card-game" data-chapter="games">
+                    <div class="card-number">🎯</div>
+                    <h3>Test Your Understanding</h3>
+                    <p>Interactive challenges based on the wisdom</p>
+                    <div class="card-footer">
+                        <span>3 games</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="knowledge-card card-accent" data-chapter="ebook">
+                    <div class="card-number">∞</div>
+                    <h3>Complete eBook</h3>
+                    <p>Read all chapters in continuous format</p>
+                    <div class="card-footer">
+                        <span>Full text</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT VIEWER -->
+        <section class="screen" id="screenContent" data-screen="content">
+            <div class="reader-wrapper">
+                <div class="reader-card" id="readerCard">
+                    <div class="reader-content" id="contentBody">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <button class="nav-arrow nav-prev nav-desktop" id="btnPrevious" disabled aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <button class="nav-arrow nav-next nav-desktop" id="btnNext" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Navigation -->
+                <div class="mobile-nav-container" id="mobileNav">
+                    <button class="btn-mobile-nav" id="btnMobilePrev" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <div class="progress-dots" id="progressDots"></div>
+                    
+                    <button class="btn-mobile-nav" id="btnMobileNext">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Progress Dots -->
+                <div class="progress-dots progress-dots-desktop" id="progressDotsDesktop"></div>
+            </div>
+        </section>
+
+        <!-- GAMES HUB -->
+        <section class="screen" id="screenGamesHub" data-screen="gameshub">
+            <div class="games-header">
+                <h2>Test Your Understanding</h2>
+                <p class="games-desc">Interactive challenges to deepen your knowledge</p>
+            </div>
+            
+            <div class="games-grid">
+                <div class="game-card" data-game="mcq">
+                    <div class="game-icon">📝</div>
+                    <h3>Multiple Choice</h3>
+                    <p>Test your knowledge with questions from the text</p>
+                    <div class="game-meta">10 questions</div>
+                </div>
+
+                <div class="game-card" data-game="dragdrop">
+                    <div class="game-icon">🎯</div>
+                    <h3>Match & Connect</h3>
+                    <p>Connect concepts with their meanings</p>
+                    <div class="game-meta">8 pairs</div>
+                </div>
+
+                <div class="game-card" data-game="sequence">
+                    <div class="game-icon">📖</div>
+                    <h3>Story Sequence</h3>
+                    <p>Arrange Satyakam's journey in correct order</p>
+                    <div class="game-meta">7 events</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MCQ GAME -->
+        <section class="screen" id="screenMCQ" data-screen="mcq">
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="game-progress">
+                        <span id="mcqCurrent">1</span> / <span id="mcqTotal">10</span>
+                    </div>
+                    <div class="game-score">Score: <span id="mcqScore">0</span></div>
+                </div>
+                
+                <div class="game-card-large">
+                    <div class="question-text" id="mcqQuestion"></div>
+                    <div class="options-container" id="mcqOptions"></div>
+                </div>
+                
+                <div class="game-feedback" id="mcqFeedback"></div>
+                
+                <button class="btn-game-next" id="btnMCQNext" style="display: none;">Continue</button>
+            </div>
+        </section>
+
+        <!-- DRAG DROP GAME -->
+        <section class="screen" id="screenDragDrop" data-screen="dragdrop">
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="game-title">Match the Concepts</div>
+                    <div class="game-score">Matched: <span id="ddScore">0</span> / <span id="ddTotal">8</span></div>
+                </div>
+                
+                <div class="dragdrop-container">
+                    <div class="dragdrop-column">
+                        <h4>Concepts</h4>
+                        <div id="ddConcepts" class="dd-items"></div>
+                    </div>
+                    
+                    <div class="dragdrop-column">
+                        <h4>Meanings</h4>
+                        <div id="ddMeanings" class="dd-targets"></div>
+                    </div>
+                </div>
+                
+                <div class="game-feedback" id="ddFeedback"></div>
+                <button class="btn-game-check" id="btnDDCheck">Check Answers</button>
+            </div>
+        </section>
+
+        <!-- SEQUENCE GAME -->
+        <section class="screen" id="screenSequence" data-screen="sequence">
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="game-title">Arrange Satyakam's Journey</div>
+                    <div class="game-hint">Drag to reorder the events</div>
+                </div>
+                
+                <div class="sequence-container" id="seqContainer"></div>
+                
+                <div class="game-feedback" id="seqFeedback"></div>
+                <button class="btn-game-check" id="btnSeqCheck">Check Sequence</button>
+            </div>
+        </section>
+
+        <!-- EBOOK READER -->
+        <section class="screen" id="screenEbook" data-screen="ebook">
+            <div class="ebook-layout">
+                <aside class="ebook-nav">
+                    <h3>Chapters</h3>
+                    <nav class="ebook-chapters" id="ebookChapters">
+                        <a href="#" data-ebook-chapter="intro">Introduction</a>
+                        <a href="#" data-ebook-chapter="story">The Truth of Satyakam</a>
+                        <a href="#" data-ebook-chapter="india">India We Never Knew</a>
+                        <a href="#" data-ebook-chapter="women">Women as Bearers of Knowledge</a>
+                        <a href="#" data-ebook-chapter="education">Education as Character Formation</a>
+                        <a href="#" data-ebook-chapter="truth">Truth, Integrity, and Social Order</a>
+                        <a href="#" data-ebook-chapter="decline">When Wisdom Was Forgotten</a>
+                        <a href="#" data-ebook-chapter="future">Reimagining India's Future</a>
+                    </nav>
+                </aside>
+                <main class="ebook-main">
+                    <article class="ebook-text" id="ebookText">
+                        <!-- eBook content -->
+                    </article>
+                </main>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
